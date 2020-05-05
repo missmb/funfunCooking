@@ -1,3 +1,5 @@
+import css from "bootstrap/dist/css/bootstrap.min.css";
+
 class SearchBar extends HTMLElement {
 
     constructor() {
