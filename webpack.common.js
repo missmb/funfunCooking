@@ -10,7 +10,7 @@ module.exports = {
    module: {
        rules: [
            {
-               test: /\.css$/,
+               test: /\.scss$/,
                use: [
                    {
                        loader: "style-loader"
@@ -18,11 +18,33 @@ module.exports = {
                    {
                        loader: "css-loader"
                    }
+                //    ,
+                //    {
+                //     // Loader for webpack to process CSS with PostCSS
+                //     loader: 'postcss-loader',
+                //     options: {
+                //       plugins: function () {
+                //         return [
+                //           require('autoprefixer')
+                //         ];
+                //       }
+                //     }
+                //   }
+                //   ,
+                //   {
+                //     // Loads a SASS/SCSS file and compiles it to CSS
+                //     loader: 'sass-loader'
+                //   }
                ]
            }
        ]
    },
    plugins: [
+    //    new webpack.providerPlugin({
+    //         $: 'jquery',
+    //         jQuery: 'jquery',
+    //         'window.jQuery' : 'jquery'
+    //    }),
        new HtmlWebpackPlugin({
            template: "./src/index.html",
            filename: "index.html"

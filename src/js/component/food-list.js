@@ -26,7 +26,7 @@ class FoodList extends HTMLElement {
     }
   
     render() {
-        this.shadowDOM.innerHTML = "";
+        this.shadowDOM.innerHTML = ``;
         this._foods.forEach(food => {
             const foodItemElement = document.createElement("food-item");
             foodItemElement.food = food

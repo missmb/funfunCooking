@@ -1,3 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap';
 import "regenerator-runtime";
 import "./css/style.css";
 import "./js/component/app-bar.js";
