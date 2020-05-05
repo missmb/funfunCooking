@@ -9,45 +9,41 @@ module.exports = {
    },
    module: {
        rules: [
-           {
-               test: /\.scss$/,
-               use: [
-                   {
-                       loader: "style-loader"
-                   },
-                   {
-                       loader: "css-loader"
-                   }
-                //    ,
-                //    {
-                //     // Loader for webpack to process CSS with PostCSS
-                //     loader: 'postcss-loader',
-                //     options: {
-                //       plugins: function () {
-                //         return [
-                //           require('autoprefixer')
-                //         ];
-                //       }
-                //     }
-                //   }
-                //   ,
-                //   {
-                //     // Loads a SASS/SCSS file and compiles it to CSS
-                //     loader: 'sass-loader'
-                //   }
-               ]
-           }
+            /* rules buat component */
+            {
+                test: /\.css$/i,
+                exclude: /styles/,
+                use: ["to-string-loader", "css-loader"]
+            },
+            /* rules buat global style */
+            {
+                test: /\.css$/i,
+                include: /styles/,
+                use: ["style-loader", "css-loader"]
+            }
+        //    {
+        //        test: /\.css$/,
+        //        use: [
+        //            {
+        //                loader: "style-loader"
+        //            },
+        //            {
+        //                loader: "css-loader"
+        //            }
+
+        //        ]
+        //    }
        ]
-   },
+   }
+   ,
    plugins: [
-    //    new webpack.providerPlugin({
-    //         $: 'jquery',
-    //         jQuery: 'jquery',
-    //         'window.jQuery' : 'jquery'
-    //    }),
-       new HtmlWebpackPlugin({
-           template: "./src/index.html",
-           filename: "index.html"
-       })
+    new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, "src/index.html"),
+        filename: "index.html"
+    })
+    //    new HtmlWebpackPlugin({
+    //        template: "./src/index.html",
+    //        filename: "index.html"
+    //    })
    ]
 }
