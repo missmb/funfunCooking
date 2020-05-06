@@ -27,71 +27,30 @@ class SearchBar extends HTMLElement {
     render() {
         this.shadowDOM.innerHTML = `
         <style>
-        .search-container {
-            max-width: 800px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            padding: 16px;
-            border-radius: 5px;
-            display: flex;
-            position: sticky;
-            top: 10px;
-            background-color: white;
-        }
-        
-        .search-container > input {
-            width: 75%;
-            padding: 16px;
-            border: 0;
-            border-bottom: 1px solid cornflowerblue;
-            font-weight: bold;
-        }
-        
-        .search-container > input:focus {
-            outline: 0;
-            border-bottom: 2px solid cornflowerblue;
-        }
-        
-        .search-container > input:focus::placeholder {
-            font-weight: bold;
-        }
-        
-        .search-container >  input::placeholder {
-            color: cornflowerblue;
-            font-weight: normal;
-        }
-        
-        .search-container > button {
-            width: 23%;
-            cursor: pointer;
-            margin-left: auto;
-            padding: 16px;
-            background-color: cornflowerblue;
-            color: white;
-            border: 0;
-            text-transform: uppercase;
-        }
-        
-        @media screen and (max-width: 550px){
-            .search-container {
-                flex-direction: column;
-                position: static;
-            }
-        
-            .search-container > input {
-                width: 100%;
-                margin-bottom: 12px;
-            }
-        
-            .search-container > button {
-                width: 100%;
-            }
-        }
-        </style>
-        <div id="search-container" class="search-container">
-            <input placeholder="Search food" id="searchElement" type="search">
-            <button id="searchButtonElement" type="submit">Search</button>
+        ${css}
+    </style>
+    <div class="row mb-4">
+    
+        <div id="search-container" class="search-container form-group col-md-9">
+            <input id="searchElement" class="form-control form-control-underlined" type="text" placeholder="Search food" aria-label="Search">
+            </div>
+           <div class="form-group col-md-3">
+  <button id="searchButtonElement" class="btn btn-primary rounded-pill btn-block shadow-sm" type="submit">Search</button>
         </div>
+        </div>
+        
+
+        
         `;
+
+        // <div class="row mb-4">
+        //     <div class="form-group col-md-9">
+        //       <input id="exampleFormControlInput5" type="email" placeholder="What're you searching for?" class="form-control form-control-underlined">
+        //     </div>
+        //     <div class="form-group col-md-3">
+        //       <button type="submit" class="btn btn-primary rounded-pill btn-block shadow-sm">Search</button>
+        //     </div>
+        //   </div>
 
         //this._clickEvent sebagai event pada element <button>
         this.shadowDOM.querySelector("#searchButtonElement").addEventListener("click", this._clickEvent);
