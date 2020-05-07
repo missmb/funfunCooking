@@ -38,21 +38,8 @@ class SearchBar extends HTMLElement {
   <button id="searchButtonElement" class="btn btn-primary rounded-pill btn-block shadow-sm" type="submit">Search</button>
         </div>
         </div>
-        
-
-        
         `;
 
-        // <div class="row mb-4">
-        //     <div class="form-group col-md-9">
-        //       <input id="exampleFormControlInput5" type="email" placeholder="What're you searching for?" class="form-control form-control-underlined">
-        //     </div>
-        //     <div class="form-group col-md-3">
-        //       <button type="submit" class="btn btn-primary rounded-pill btn-block shadow-sm">Search</button>
-        //     </div>
-        //   </div>
-
-        //this._clickEvent sebagai event pada element <button>
         this.shadowDOM.querySelector("#searchButtonElement").addEventListener("click", this._clickEvent);
     }
  }
