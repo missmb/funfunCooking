@@ -30,10 +30,11 @@ class FoodDetail extends HTMLElement {
          <style>
             ${css}
         </style>
-        <div class="card" style="width: 18rem;">
+        <div class="card" ">
          <img class="card-img-top" src="${this._food.strMealThumb}" alt="Fan Art">
          <div class="card-body text-center">
           <h2 class= "cart-title">${this._food.strMeal}</h2>
+          <p>dgfggd</p>ss
           <p class="card-text"> ${this._food.strInstructions}</p>
             </div>
           </div>`;
