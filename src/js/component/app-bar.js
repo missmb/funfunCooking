@@ -15,12 +15,8 @@ class AppBar extends HTMLElement {
         this.shadowRoot.innerHTML = `
        <style>
             ${css};
-            .bg-cover {
-              background-color: green;
-          }
-          
         </style>
-        <div class="jumbotron text-center bg-cover">
+        <div class="jumbotron text-center bg-cover bg-info">
           <h1>DELICIOUS FOOD</h1>
           <p>find delicious daily food with one click</p>
         </div>`

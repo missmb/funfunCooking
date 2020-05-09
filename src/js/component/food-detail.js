@@ -30,14 +30,42 @@ class FoodDetail extends HTMLElement {
          <style>
             ${css}
         </style>
-        <div class="card" ">
-         <img class="card-img-top" src="${this._food.strMealThumb}" alt="Fan Art">
-         <div class="card-body text-center">
-          <h2 class= "cart-title">${this._food.strMeal}</h2>
-          <p>dgfggd</p>ss
-          <p class="card-text"> ${this._food.strInstructions}</p>
+        
+          <div class="row">
+        <div class="col s12 m12">
+            <div class="card">
+                <div class="card-image">
+                <img class="card-img-top" src="${this._food.strMealThumb}
+                </div>
+                <div class="card-content">
+                    <div class="flex-column">
+                        <div class="flex-row">
+                            <div>
+                            <img class="card-img-top" src="${this._food.strMealThumb}
+                            </div>
+                            <div>
+                                <h5>${this._food.strMeal}</h5>
+                            <h6>${this._food.strMeal}</h6>
+                            <p>${this._food.strMeal}</p>
+                            <br>
+                            <h6>Popularity</h6>
+                            <div>
+                                <span><h5>${this._food.strMeal}</h5> from <strong>${this._food.strMeal} votes</strong> </span>
+                            </div>
+                            <br>
+                            <h6>Duration</h6> 
+                            <h5>${this._food.strMeal} Minutes</h5>
+                            </div>
+                        </div>
+                        <div>
+                            <h5>Overview</h5>
+                            <p id="movie-description">${this._food.strInstructions}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>`;
+        </div>
+    </div>`;
 }
 
 }

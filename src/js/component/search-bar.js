@@ -29,9 +29,8 @@ class SearchBar extends HTMLElement {
         <style>
         ${css}
     </style>
-    <div class="row mb-4">
-    
-        <div id="search-container" class="search-container form-group col-md-9">
+    <div class="row mb-3 text-center">
+        <div id="search-container" class="search-container form-group col-md-6">
             <input id="searchElement" class="form-control form-control-underlined" type="text" placeholder="Search food" aria-label="Search">
             </div>
            <div class="form-group col-md-3">
