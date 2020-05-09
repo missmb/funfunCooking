@@ -10,28 +10,6 @@ class FoodItem extends HTMLElement {
          this._food = food;
         this.render();
      }
-
-//      set foods(foodd) {
-//       this._foodd = foodd;
-//       this.render();
-//   }
-   
-//      connectedCallback(){
-//       this.render();
-//   }
-//   set clickEventD(event) {
-//       this._clickEventD =event;
-//       this.render();
-//   }
-//   get textContent() {
-//       return this.shadowDOM.querySelector("#lala").text();
-//   }
-
-// function reply_click()
-// {
-//     alert(event.srcElement.id);
-// }
-
      render() {
          
          this.shadowDOM.innerHTML = `
@@ -44,7 +22,7 @@ class FoodItem extends HTMLElement {
                 <div class="card-body">
                         <div class="row no-gutters" style="margin: 8px;">
                             <div class="col-md-6">
-                            <img class="card-img-top"style="border-radius: 20px; height:30rem;"  src="${this._food.strMealThumb}" alt="Fan Art">
+                            <img class="card-img-top"style="border-radius: 20px; height:27rem;"  src="${this._food.strMealThumb}" alt="Fan Art">
                             </div>
                             <div class="col-md-4" style="margin: 8px;">
                             <h4>Country</h4> 
@@ -52,7 +30,6 @@ class FoodItem extends HTMLElement {
                             <br>
                             <h4>Category</h4> 
                             <p>${this._food.strCategory}</p>
-                            <br>
                             <h4>Ingredient</h4>
                             <div>
                                 <p>${this._food.strIngredient1}</p>
@@ -74,16 +51,6 @@ class FoodItem extends HTMLElement {
             </div>
         </div>
        `;
-        //   this.shadowDOM.querySelector("click-me").addEventListener("click", this._clickEventD)
 }
- // <div class="card" style="width: 30rem;">
-        //  <img class="card-img-top" src="${this._food.strMealThumb}" alt="Fan Art">
-        //  <div class="card-body text-center">
-        //   <h2 class= "cart-title">${this._food.strMeal}</h2>
-        //   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        //   <a href="detail.html" id="${this._food.idMeal}" class="btn btn-primary click-me" onClick="reply_click()">Detail</a>
-        //   <p id="idElement">${this._food.idMeal}</p>
-        //   </div>
-        //   </div>
 }
   customElements.define("food-item", FoodItem);
