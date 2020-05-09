@@ -29,11 +29,11 @@ class SearchBar extends HTMLElement {
         <style>
         ${css}
     </style>
-    <div class="row mb-3 text-center">
-        <div id="search-container" class="search-container form-group col-md-6">
+    <div class="row sticky-top" style="padding-top: 8px">
+        <div id="search-container" class="search-container form-group col-md-8">
             <input id="searchElement" class="form-control form-control-underlined" type="text" placeholder="Search food" aria-label="Search">
             </div>
-           <div class="form-group col-md-3">
+           <div class="form-group col-md-4">
   <button id="searchButtonElement" class="btn btn-primary rounded-pill btn-block shadow-sm" type="submit">Search</button>
         </div>
         </div>

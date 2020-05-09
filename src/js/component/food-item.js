@@ -38,29 +38,22 @@ class FoodItem extends HTMLElement {
          <style>
             ${css}
         </style>
-        <div class="card" style="margin-bottom : 10px;">
-        <h2 class="text-center">${this._food.strMeal}</h2>
-                <div class="card-image" >
-                <iframe  height="345" src="${this._food.strYoutube}">
-</iframe>
-
-                </div>
-                <div class="card-content">
+        <div class="card border-info text-center" style="margin-bottom : 10px;">
+        <div class="card-header">
+        <h2>${this._food.strMeal}</h2></div>
+                <div class="card-body">
                         <div class="row no-gutters" style="margin: 8px;">
-                            <div class="col-md-4">
-                            <img class="card-img-top"style="border-radius: 20px; height:20rem;"  src="${this._food.strMealThumb}" alt="Fan Art">
+                            <div class="col-md-6">
+                            <img class="card-img-top"style="border-radius: 20px; height:30rem;"  src="${this._food.strMealThumb}" alt="Fan Art">
                             </div>
-                            <div class="col-md-8">
-                            <h6>${this._food.strMeal}</h6>
-                            <p>${this._food.strMeal}</p>
-                            <br>
-                            <h6>Country</h6> 
+                            <div class="col-md-4" style="margin: 8px;">
+                            <h4>Country</h4> 
                             ${this._food.strArea}
                             <br>
-                            <h6>Category</h6> 
-                            <h5>${this._food.strCategory} Minutes</h5>
+                            <h4>Category</h4> 
+                            <p>${this._food.strCategory}</p>
                             <br>
-                            <h6>Ingredient</h6>
+                            <h4>Ingredient</h4>
                             <div>
                                 <p>${this._food.strIngredient1}</p>
                                 <p>${this._food.strIngredient2}</p>
@@ -70,12 +63,14 @@ class FoodItem extends HTMLElement {
                             </div>
                             </div>
                         </div>
-                        <div>
-                            <h5>Overview</h5>
-                            <p id="movie-description">${this._food.strInstructions}</p>
+                        <div style="margin: 20px;">
+                            <h5 class="text-center">Overview</h5>
+                            <p class="text-justify">${this._food.strInstructions}</p>
                         </div>
                     </div>
-                
+                    <div class="card-footer">
+                    <a href="${this._food.strSource}" class="btn btn-primary click-me">Show More</a>
+	                </div>
             </div>
         </div>
        `;
